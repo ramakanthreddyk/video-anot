@@ -1,0 +1,10 @@
+<div class="side-tab-menu">
+    <div class="list-group" *ngFor="let item of sidemenu; let i = index" (click)="eventforsidemenu(item)">
+        <a class="list-group-item  text-center" 
+        [ngClass]="{active: item.id==active}"  
+        [routerLink]="[item.name]"  
+        routerLinkActive="active">
+        <h4><mat-icon>{{item.icon}}</mat-icon></h4><b>{{item.name}}</b>
+        </a>
+    </div>
+</div>

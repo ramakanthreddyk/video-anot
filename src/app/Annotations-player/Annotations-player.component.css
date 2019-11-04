@@ -1,0 +1,52 @@
+.info-layer {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: auto;
+    font-family: sans-serif;
+    color: white;
+    background: black;
+    opacity: 0.5;
+    margin: 20px;
+    padding: 10px;
+    z-index: 100;
+    cursor: pointer;
+}
+
+.navbar {
+    font-size: 0;
+    position: absolute;
+    font-size: 0;
+    position: absolute;
+    flex-direction: row;
+    display: flex;
+    overflow: auto;
+    padding: 20px;
+  }
+  
+  .nav-item {
+    box-sizing: border-box;
+    color: #fff;
+    display: inline-block;
+    padding: 15px;
+    text-align: center;
+    vertical-align: middle;
+    overflow: auto;
+  }
+
+.video {
+  height: 50%;
+}
+
+.video-container {
+    padding: 40px;
+}
+
+.timeline-container {
+    overflow: auto;
+    padding-bottom: 20px;
+  }
+
+table {
+    width: 100%;
+  }
