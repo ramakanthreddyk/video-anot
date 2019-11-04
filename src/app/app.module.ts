@@ -33,6 +33,7 @@ import { ConfigurationComponent } from './configuration/configuration.component'
 import { UploadAssetsComponent } from './upload-assets/upload-assets.component';
 import { HomeComponent } from './home/home.component';
 import { DxDataGridModule } from 'devextreme-angular';
+import { NgxEchartsModule } from 'ngx-echarts';
 
 @NgModule({
     declarations: [
@@ -67,7 +68,8 @@ import { DxDataGridModule } from 'devextreme-angular';
         FlexLayoutModule,
         MatSelectModule,
         MatTabsModule,
-        DxDataGridModule
+        DxDataGridModule,
+        NgxEchartsModule
     ],
     providers: [
         AuthGuard,

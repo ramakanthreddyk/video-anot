@@ -6,6 +6,7 @@ import { AuthenticationService, UserService, AnnotationService } from '../_servi
 import { Timeline, TimelineList, Admins, Asset, IEval, Annotation } from '../_models';
 import { Subject, of, Observable } from 'rxjs';
 import { takeUntil, switchMap } from 'rxjs/operators';
+import { EChartOption } from 'echarts';
 
 @Component({
     selector: 'app-home',
@@ -25,6 +26,20 @@ export class HomeComponent implements OnInit, OnDestroy {
     userType: Admins;
     userId: string;
     annotatorSelected: string;
+    updateChartOptions: EChartOption = {};
+    chartOption: EChartOption = {
+        xAxis: {
+            type: 'category',
+            data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+        },
+        yAxis: {
+            type: 'value'
+        },
+        series: [{
+            data: [820, 932, 901, 934, 1290, 1330, 1320],
+            type: 'line'
+        }]
+    }
     constructor(
         private users: UserService,
         private router: Router,
@@ -54,7 +69,7 @@ export class HomeComponent implements OnInit, OnDestroy {
         this.annoService.getAnnotationList().subscribe((list: any) => {
             this.annotationsList = list.data;
             console.log(this.annotationsList);
-        })
+        });
 
     }
 
