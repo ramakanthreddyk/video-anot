@@ -32,6 +32,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { ConfigurationComponent } from './configuration/configuration.component';
 import { UploadAssetsComponent } from './upload-assets/upload-assets.component';
 import { HomeComponent } from './home/home.component';
+import { DxDataGridModule } from 'devextreme-angular';
 
 @NgModule({
     declarations: [
@@ -65,7 +66,8 @@ import { HomeComponent } from './home/home.component';
         FormsModule,
         FlexLayoutModule,
         MatSelectModule,
-        MatTabsModule
+        MatTabsModule,
+        DxDataGridModule
     ],
     providers: [
         AuthGuard,

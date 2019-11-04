@@ -11,12 +11,14 @@ export class UploadAssetsComponent implements OnInit {
 
   selectedCategoryFile: File;
   fileStatus = false;
+  fileList = [];
 
   @ViewChild('fileInput', {static: false}) fileInput: ElementRef;
 
   constructor(private http: HttpClient) { }
 
   ngOnInit() {
+    this.getUserUploadAssets();
   }
 
   oncategoryFileChanged(event: any) {
@@ -49,8 +51,9 @@ export class UploadAssetsComponent implements OnInit {
   }
 
   getUserUploadAssets() {
-    this.http.get(`${environment.backendUrl}/getUserUploadAssets`).subscribe(data => {
+    this.http.get(`${environment.backendUrl}/getUserUploadAssets`).subscribe((data: any) => {
       console.log(data);
+      this.fileList = data.data;
     });
   }
 
